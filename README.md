@@ -10,6 +10,10 @@ The chatbot simulates a WhatsApp chatbot backend by providing predefined respons
 It is deployed and fully testable through a web-based UI (no WhatsApp API key required).
 
 ---
+⚠️ **Cold Start Notice**  
+This application is deployed on Render's free tier, which may put services to sleep after inactivity.  
+When first accessed, the backend may take **30–50 seconds** to wake up and respond.  
+Please be patient — this is normal and only happens on the first request after a period of idleness.
 
 ## 📌 Project Purpose
 
@@ -151,7 +155,6 @@ You can replace these with actual links before finalizing.
 | Chat history logging              | ✅ Done                                                 |
 | UI for testing                    | ✅ Bonus                                                |
 | WhatsApp Business API integration | ⚠️ Simulated only (permitted for test)                 |
-| Unit tests                        | ⚠️ Not fully implemented (to be added if time permits) |
 
 ---
 
