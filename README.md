@@ -89,7 +89,7 @@ jarurat-chatbot/
 
 ### 🌐 Frontend (Test UI)
 
-> [🔗 Chatbot UI on Render](https://your-ui.onrender.com)
+> [🔗 Chatbot UI on Render](https://jarurat-chatbot-1.onrender.com/)
 
 * Automatically generates a `userId`
 * Lets you send test messages (e.g., `"Hi"`, `"1"`, `"delhi"`)
@@ -97,7 +97,7 @@ jarurat-chatbot/
 
 ### 🔁 API Endpoint
 
-> [🔗 POST `/webhook`](https://your-api.onrender.com/webhook)
+> [🔗 POST `/webhook`](https://jarurat-chatbot.onrender.com/webhook)
 
 #### Sample Request:
 
@@ -136,8 +136,8 @@ jarurat-chatbot/
 
 | Service     | URL                             |
 | ----------- | ------------------------------- |
-| Backend API | `https://your-api.onrender.com` |
-| Frontend UI | `https://your-ui.onrender.com`  |
+| Backend API | `https://jarurat-chatbot.onrender.com/webhook` |
+| Frontend UI | `https://jarurat-chatbot-1.onrender.com/`  |
 
 You can replace these with actual links before finalizing.
 
