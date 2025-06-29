@@ -1,8 +1,8 @@
 # ---- Build Stage ----
-FROM openjdk:21-jdk-alpine AS builder
+FROM eclipse-temurin:21-jdk AS builder
 WORKDIR /app
 
-RUN apk add --no-cache maven
+RUN apt-get update && apt-get install -y maven
 COPY pom.xml .
 COPY .mvn/ .mvn/
 COPY mvnw .
@@ -13,14 +13,14 @@ COPY src/ src/
 RUN ./mvnw clean package -DskipTests
 
 # ---- Runtime Stage ----
-FROM openjdk:21-jdk-alpine
+FROM eclipse-temurin:21-jdk
 WORKDIR /app
-RUN apk add --no-cache curl
+RUN apt-get update && apt-get install -y curl
 
 COPY --from=builder /app/target/jarurat-chatbot-0.0.1-SNAPSHOT.war app.war
 
-RUN addgroup -g 1001 -S spring && \
-    adduser -S spring -u 1001 -G spring && \
+RUN addgroup --gid 1001 spring && \
+    adduser --uid 1001 --gid 1001 --disabled-password spring && \
     chown -R spring:spring /app
 USER spring
 
