@@ -34,8 +34,8 @@ WORKDIR /app
 # Install curl for health checks (optional)
 RUN apk add --no-cache curl
 
-# Copy the built jar from the previous stage
-COPY --from=0 /app/target/*.war app.war
+# Copy the built WAR from the previous stage
+COPY --from=0 /app/target/jarurat-chatbot-0.0.1-SNAPSHOT.war app.war
 
 # Create a non-root user for security
 RUN addgroup -g 1001 -S spring && \

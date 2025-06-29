@@ -1,7 +1,10 @@
 package com.jaruratchatbot.jarurat_chatbot.Config;
 
+import java.io.ByteArrayInputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -20,10 +23,13 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class FireBaseConfiguration {
 
-    private static final String SERVICE_ACCOUNT_KEY_PATH = "/Users/ansh/Desktop/to_do_list/Spring_boot_projects/Clone/jarurat-chatbot/src/main/resources/jarurat-chatbot-firebase-adminsdk-fbsvc-eefb46ba3d.json";
+    
     @PostConstruct
     public void initializeFirebaseApp() throws IOException {
-        try (FileInputStream serviceAccount = new FileInputStream(SERVICE_ACCOUNT_KEY_PATH)) {
+        try {
+            String firebaseJson = System.getenv("FIREBASE_CONFIG");
+            InputStream serviceAccount = new ByteArrayInputStream(firebaseJson.getBytes(StandardCharsets.UTF_8));
+
             FirebaseOptions options = FirebaseOptions.builder()
                     .setCredentials(GoogleCredentials.fromStream(serviceAccount))
                     .build();
