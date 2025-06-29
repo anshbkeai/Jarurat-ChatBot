@@ -180,5 +180,18 @@
         </section>
     </main>
     
+    <script>
+        // Mobile menu toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('[data-collapse-toggle="navbar-default"]');
+            const menu = document.getElementById('navbar-default');
+            
+            if (menuToggle && menu) {
+                menuToggle.addEventListener('click', function() {
+                    menu.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
 </body>
 </html>

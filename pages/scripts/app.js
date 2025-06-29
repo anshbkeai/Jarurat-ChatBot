@@ -2,6 +2,18 @@ import { fetch_User } from "./fetch_User.js";
 import { Chat_Box_UI } from "./UiManager.js";
 const root = document.getElementById("root");
 
+// Mobile menu toggle functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('[data-collapse-toggle="navbar-default"]');
+    const menu = document.getElementById('navbar-default');
+    
+    if (menuToggle && menu) {
+        menuToggle.addEventListener('click', function() {
+            menu.classList.toggle('hidden');
+        });
+    }
+});
+
 const startChat_button = document.querySelector(".startChat");
 
 console.log(startChat_button);
