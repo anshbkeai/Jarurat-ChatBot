@@ -139,7 +139,6 @@ jarurat-chatbot/
 | Backend API | `https://jarurat-chatbot.onrender.com/webhook` |
 | Frontend UI | `https://jarurat-chatbot-1.onrender.com/`  |
 
-You can replace these with actual links before finalizing.
 
 ---
 
