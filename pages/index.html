@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI-Test</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<body>
+    <div id="root"  >
+
+        
+
+    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    
+        <div class="hidden w-full flex md:block md:w-auto" id="navbar-default">
+        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <li>
+            <a href="index.html" class="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Home</a>
+            </li>
+            <li>
+            <a href="about.html" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+            </li>
+            <li>
+            <a href="https://github.com/anshbkeai/Jarurat-ChatBot/" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Source Code</a>
+            </li>
+            <li>
+            <a href="chat-response.html" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Chat Responses</a>
+            </li>
+            
+        </ul>
+        </div>
+    </div>
+    </nav>
+
+
+
+
+
+  
+
+
+<div class="container flex flex-col items-center text-center gap-2 md:gap-4 relative z-10 svelte-1j3l3pu">
+    <h2 class="text-4xl md:text-8xl font-extrabold text-[#0464C4]">Jarurat Chatbot — Assignment Testing UI</h2> 
+    <h2 class="text-2xl md:text-4xl font-semibold" style="color: rgb(19, 47, 120);"> This is a test interface built as part of the <strong>Java Spring Boot + Firebase chatbot assignment</strong> for <strong>Jarurat Care Foundation</strong>.</h2> 
+   <p class="text-base md:text-lg max-w-3xl text-gray-700 mt-4">
+  This chatbot project demonstrates a stateless conversation flow using Firestore, built as part of an internship assignment.
+</p>
+
+    <h2 class="text-2xl md:text-4xl font-semibold" style="color: rgb(19, 47, 120);">
+    ⚠️ This app is hosted on Render's free tier. If it's inactive, it may take a few seconds to wake up.
+    Please wait 50 seconds for the chatbot to respond on first load.
+    </h2>
+
+
+<div class="bg-[#f5faff] border border-blue-200 p-6 rounded-xl shadow-md mt-6 w-full max-w-3xl text-left">
+  <h3 class="text-xl font-semibold text-[#0464C4] mb-2">🧪 How to Test:</h3>
+  <ul class="list-disc list-inside text-gray-800 space-y-2">
+    <li>A random user ID is generated when you click "Start Testing Chat".</li>
+    <li>Begin by typing <strong>"Hi"</strong> in the input box.</li>
+    <li>The bot responds with 5 service options — choose one by replying with its number.</li>
+    <li>Each message is logged in Firebase under the generated user ID.</li>
+  </ul>
+</div>
+
+<div class="bg-white border border-gray-300 p-6 rounded-xl shadow-md mt-6 w-full max-w-3xl text-left">
+  <h3 class="text-xl font-semibold text-[#0464C4] mb-2">🔍 About This Project:</h3>
+  <ul class="list-disc list-inside text-gray-800 space-y-2">
+    <li><strong>Backend:</strong> Spring Boot REST API deployed on Render</li>
+    <li><strong>Database:</strong> Firestore (Firebase)</li>
+    <li><strong>Chat Logic:</strong> Stateless (predefined question-answer flow)</li>
+    <li><strong>API Endpoint:</strong> <code class="bg-gray-100 px-2 py-1 rounded">POST /webhook</code></li>
+  </ul>
+</div>
+
+
+<button
+  
+  class="startChat  px-6 py-3 text-white bg-[#0464C4] rounded-lg font-semibold hover:bg-blue-700 transition"
+>
+  🚀 Start Testing Chat
+</button>
+
+</div>
+
+</body>
+<script type="module" src="../scripts/app.js"></script>
+</html>

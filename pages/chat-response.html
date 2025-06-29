@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jarurat Chatbot – Response Mapping</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+
+   <nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    
+        <div class="hidden w-full flex md:block md:w-auto" id="navbar-default">
+        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <li>
+            <a href="index.html" class="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Home</a>
+            </li>
+            <li>
+            <a href="about.html" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+            </li>
+            <li>
+            <a href="https://github.com/anshbkeai/Jarurat-ChatBot/" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Source Code</a>
+            </li>
+            <li>
+            <a href="chat-response.html" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Chat Responses</a>
+            </li>
+            
+        </ul>
+        </div>
+    </div>
+    </nav>
+
+
+  <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-8">
+    <h1 class="text-2xl md:text-3xl font-bold text-blue-800 mb-6">📄 Chatbot Input & Response Mapping</h1>
+    <p class="text-sm text-gray-600 mb-6">
+      Below is a guide that outlines how the chatbot responds to specific user inputs. This is intended for test reviewers to quickly understand and validate the chatbot’s behavior.
+    </p>
+
+    <div class="overflow-x-auto">
+      <table class="min-w-full table-auto border border-gray-300 text-left text-sm">
+        <thead class="bg-gray-100">
+          <tr>
+            <th class="px-4 py-2 border">📝 User Input</th>
+            <th class="px-4 py-2 border">💬 Bot Response</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200">
+          <tr>
+            <td class="px-4 py-3 border">Hi</td>
+            <td class="px-4 py-3 border">
+             Hi there 👋, welcome to Jarurat Care Foundation — we're here to support you on your journey.</br>
+
+                How can we help today? Please reply with a number:
+
+                1️⃣ Find nearby cancer care hospitals  
+                2️⃣ Talk to a caregiver for emotional support  
+                3️⃣ Get nutritional advice for recovery  
+                4️⃣ Learn more about your condition  
+                5️⃣ Know our Services.
+
+            </td>
+          </tr>
+          <tr>
+            <td class="px-4 py-3 border">1</td>
+            <td class="px-4 py-3 border">Prompts user to enter their city/state to find hospitals</td>
+          </tr>
+          
+          <tr>
+            <td class="px-4 py-3 border">2</td>
+            <td class="px-4 py-3 border">Replies with a message to connect the user with caregiver support</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-3 border">3</td>
+            <td class="px-4 py-3 border">Shares nutritional guidance for patients during recovery</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-3 border">4</td>
+            <td class="px-4 py-3 border">
+              Provides an overview of symptoms, diagnosis methods, and advice on consulting a healthcare provider
+            </td>
+          </tr>
+          <tr>
+            <td class="px-4 py-3 border">5 / services</td>
+            <td class="px-4 py-3 border">
+              Returns cards of available services:<br>
+              • Patient Advocacy<br>
+              • Access to Treatment<br>
+              • Empowerment Through Education
+            </td>
+          </tr>
+          <tr>
+            <td class="px-4 py-3 border">Unknown or invalid input</td>
+            <td class="px-4 py-3 border">"Sorry, I didn’t understand. Please type 'Hi' to begin."</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="text-xs text-gray-500 mt-6">
+      💡 Tip: This mapping reflects real logic configured in Firebase under <code>bot_flows</code> and user history under <code>users/{userId}/messages</code>.
+    </p>
+  </div>
+</body>
+</html>

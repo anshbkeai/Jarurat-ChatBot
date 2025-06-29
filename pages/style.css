@@ -1,0 +1,103 @@
+.testing-intro {
+  max-width: 800px;
+  margin: 2rem auto;
+  background-color: #ffffff;
+  padding: 2rem;
+  border: 2px dashed #007b83;
+  border-radius: 10px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+.testing-intro h1 {
+  color: #007b83;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.testing-intro ul {
+  padding-left: 1rem;
+}
+
+.testing-intro ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.testing-intro p, code {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.testing-intro button {
+  margin-top: 1.5rem;
+  background-color: #007b83;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
+ .chat-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .message-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .message {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            max-width: 70%;
+            word-wrap: break-word;
+            display: flex;
+            align-items: center;
+        }
+
+        .sender-message {
+            background-color: #e0e0e0;
+            color: #000;
+            align-self: flex-start;
+        }
+
+        .receiver-message {
+            background-color: #4CAF50;
+            color: #fff;
+            align-self: flex-end;
+        }
+
+        .avatar {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .message input {
+            width: calc(100% - 20px);
+            padding: 8px;
+            margin: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .message button {
+            padding: 8px;
+            margin: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
